@@ -9,7 +9,7 @@ control — центральный файл пакета, описывающег
 В проекте настроен Github Actions с триггером на коммит в main ветку, настройки можно посмотреть в .github/workflows/docker-publish.yml
 Запуск сборщика deb пакета.
 docker build . -t <image_name>
-docker run -it --name <name> -e PY_MODUL=<url на python модуль> DEB_FORM=<version and architecture> -v ~<ProjectDir>:/var/modul <image_name>
+docker run -it --name <name> -e PY_MODUL=<url на python модуль> DEB_FORM=<версия и архитектура> -v ~<ProjectDir>:/var/modul <image_name>
 Далее в контейнере cp /var/<modul_name>.deb /var/modul/<module_name>.deb и deb пакет появится в проекте.
 Остается только выполнить apt-get install -f <packet.deb>
 
