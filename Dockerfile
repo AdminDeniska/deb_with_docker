@@ -8,7 +8,7 @@ ENV PY_MODUL=$PY_MODUL
 #ENV для того чтобы переименовать модуль во время запуска контейнера
 ENV DEB_FORM=$DEB_FORM
 #Утилиты для сбора deb пакета
-RUN apt-get update && apt-get install -y dpkg fakeroot
+RUN apt-get update && apt-get install -y dpkg fakeroot && pip install --no-cache-dir --upgrade pip -r /tmp/requirements.txt
 
 WORKDIR /app
 
