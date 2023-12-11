@@ -1,0 +1,9 @@
+Package: modul
+Version: 1.01
+Architecture: all
+Section: misc
+Maintainer: Denis
+Description: Transform to deb
+ Pam-pam-pam
+ pup
+ pip
